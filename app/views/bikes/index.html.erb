@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+</style>
+</head>
+<body>
+ 
+ <center>   
+<h1>List of bikes </h1>
+ <table>
+     <tr>
+        <th>ID </th>
+        <th>Bike Name </th>
+        <th>Bike Model</th>
+        <th>bike Type</th>
+        <th> Owner </th>
+        <th> book </th>
+        <th> contact </th>
+    </tr>
+    <tr>
+         <% @bikes.each do |f| %>
+        <th><%= f.id         %> </th>
+        <th><%= f.bikename   %> </th>
+        <th><%= f.bikemodel  %> </th>
+        <th><%= f.biketype   %> </th>
+        <th><%= f.user_id  %> </th>
+         <th>  <%=link_to('BOOK',{:action =>'book'},:class=>'action') %></th>
+         <th>  <%=link_to('CONTACT',{:action =>'book'},:class=>'action') %></th>
+         
+    </tr>
+ <% end %>
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+
+<center>
+<h1>Register your bike</h1>
+
+<table>
+<%= form_for :bikes, url: {:action =>'create'} do |f| %>
+<tr>
+    <th><p> Bike Name  </p></th>
+    <th> <%= f.text_field :bikename %></th>
+</tr>
+     <th><p>Bike Type</p></th>
+    <th><%=  f.text_field :biketype  %></th>
+</tr>
+</tr>
+     <th><p>Bike Model</p></th>
+    <th><%=  f.text_field :bikemodel  %></th>
+</tr>
+ </table>
+    <%=  f.submit %> 
+<%  end %>
+
+</center>

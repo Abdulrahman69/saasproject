@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bikename: MyString
+  bikemodel: MyString
+  biketype: MyString
+  user_id: 1
+
+two:
+  bikename: MyString
+  bikemodel: MyString
+  biketype: MyString
+  user_id: 1
