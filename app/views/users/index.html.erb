@@ -1,24 +1,58 @@
-
-<html>
-    <head>
-    
-  </head>
-
-<H1>MotoRent</H1> 
-<%if user_signed_in?%>
-<h4><%= current_user.email%></h4>
-<%end%>
-
-
-<%=link_to('Hire a Motercycle ', bikes_path) %> </br>
-
-
-<%=link_to('Register Motercycle  ', new_bike_path) %>
-<%if user_signed_in?%>
-<%end%>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TMPH00053</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tienne' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="menu-wrapper">
+  <div class="menu">
+    <ul>
+      <li><a class="active" href="index.html">home</a></li>
+      <li><a href="about.html">Hire </a></li>
+      <li><a href="services.html">messages</a></li>
+      <li><a href="solutions.html">  Register Motercycle  </a></li>
+      <li><a href="faq.html">faq</a></li>
+      <li class="img"><a href="contact.html">contact</a></li>
+    </ul>
+  </div>
+  <div class="clearing"></div>
+</div>
+<div class="wrapper">
+  <div class="header-wrapper">
+    <div class="logo">
+      <h1>Moto<span>Bike</span></h1>
+      <p>MotoBike is a peer to peer application for hire a bike or rent your bike </p>
+    </div>
+     <div class="right-panel">
+      <div class="leftcontent marRight30">
+        <div class="title">
+            <h1>Hire Motorcycle </h1>
+             <h2> <div class="button-link"> <%=link_to('Hire a Motercycle ', bikes_path) %> </br></div></h2>
+        </div>	
+      </div>
+	  <div class="leftcontent marRight30">
+        <div class="title">
+            <h1>Register Motorcycle </h1>
+             <h2> <div class="button-link"> <%=link_to('Register Motercycle  ', new_bike_path) %> </div></h2>
+        </div>	
+      </div>
+      
+    </div>
+  </div>
+  <div class="clearing"></div>
+   
+   
+   
  
-     
-
-
+</div>
+<div class="footer-wrapper">
+  
+</div>
+ 
+</div>
+</body>
 </html>

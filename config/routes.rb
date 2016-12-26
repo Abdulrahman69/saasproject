@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
  
  resources :bikes 
-  get 'bikes/index'
-
-  get 'bikes/new'
-
-  get 'bikes/create'
-  post  'bikes/create'
+ # get 'bikes/index'
+ # get 'bikes/new'
+get 'bikes/book'
+ # get 'bikes/create'
+ # post  'bikes/create'
 
   devise_for :users
   root 'users#index'
 resources :users 
-get 'bikes/book'
-  # The priority is based upon order of creation: first created -> highest priority.
+ 
+ 
+   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

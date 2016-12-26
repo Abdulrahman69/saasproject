@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
-   before_action :authenticate_user! ,except: [:index ]
+ #  before_action :authenticate_user! ,except: [:index ]
 
   def index
     @bikes = Bike.all
@@ -8,13 +8,17 @@ class BikesController < ApplicationController
   def new
     @bike = current_user.bikes.build
   end
-def book
-
-end 
+ 
   def create
      @bike = current_user.bikes.build(bike_param)
      @bike.save 
   end
+  def book
+    
+  end
+  def show 
+    
+  end 
   
   private 
   
