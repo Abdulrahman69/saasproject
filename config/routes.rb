@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
  
+  get 'review/index'
+
+  get 'review/create'
+
+  get 'review/new'
+
  resources :bikes 
  # get 'bikes/index'
  # get 'bikes/new'
