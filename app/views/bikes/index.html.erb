@@ -34,9 +34,9 @@ th, td {
         <th><%= f.bikemodel  %> </th>
         <th><%= f.biketype   %> </th>
         <th><%= f.user_id  %> </th>
-         <th>  <%=link_to('BOOK',{:action =>'book'},:class=>'action') %></th>
-         <th>  <%=link_to('Review',{:action =>'book'},:class=>'action') %></th>
-         
+         <th><%=link_to 'Reviews',{:controller =>:reviews ,:action =>:new,:id =>f.id}  %></th>
+          <th><%=link_to('Book',{:action =>'book'},:class=>'action') %></th>
+
     </tr>
  <% end %>
 </table>

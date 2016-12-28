@@ -1,0 +1,25 @@
+ 
+
+<h1>Reviews</h1>
+ 
+
+<%= form_for @review, :url => {:action => :create , :id =>@bike.id } do |f|%>
+  Enter Title <%= f.text_field :title %></br> 
+ Enter Body  <%= f.text_area :body  %></br> 
+ <%= f.submit %>
+  <% end %>
+
+<hr>
+
+ 
+
+<% if !@bike.reviews.blank? %>
+    <%for item in @bike.reviews %>
+    </br>Title : <%=item.title%>  </br>Body: <%=item.body%>
+    <%end %>
+    <%else %>
+    no review  
+   <%end %>
+
+
+ 

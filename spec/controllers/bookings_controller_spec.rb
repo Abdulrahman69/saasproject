@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe ReviewController, type: :controller do
+RSpec.describe BookingsController, type: :controller do
 
-  describe "GET #index" do
+  describe "GET #new" do
     it "returns http success" do
-      get :index
+      get :new
       expect(response).to have_http_status(:success)
     end
   end
@@ -16,9 +16,9 @@ RSpec.describe ReviewController, type: :controller do
     end
   end
 
-  describe "GET #new" do
+  describe "GET #index" do
     it "returns http success" do
-      get :new
+      get :index
       expect(response).to have_http_status(:success)
     end
   end
