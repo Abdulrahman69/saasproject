@@ -1,2 +1,25 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+ 
+
+<h1>bookings</h1>
+ 
+
+<%= form_for @booking, :url => {:action => :create , :id =>@bike.id } do |f|%>
+ Enter start on <%= f.text_field :starton %></br> 
+ Enter end on   <%= f.text_field :endon  %></br> 
+ <%= f.submit %>
+  <% end %>
+
+<hr>
+
+ 
+
+<% if !@bike.bookings.blank? %>
+    <%for item in @bike.bookings %>
+    </br>start date : <%=item.starton%>  </br>end date : <%=item.endon%>
+    <%end %>
+    <%else %>
+    no bookings  
+   <%end %>
+
+
+ 

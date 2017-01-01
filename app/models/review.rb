@@ -1,3 +1,5 @@
 class Review < ActiveRecord::Base
-    belongs_to :bike 
+    validates :title , length: {maximum: 50 },presence: true 
+    validates :body , length: {maximum: 500 },presence: true 
+     belongs_to :bike 
 end

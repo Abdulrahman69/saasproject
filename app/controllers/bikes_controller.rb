@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
- #  before_action :authenticate_user! ,except: [:index ]
+   before_action :authenticate_user! ,except: [:index ]
 
   def index
     @bikes = Bike.all
@@ -11,8 +11,12 @@ class BikesController < ApplicationController
  
   def create
      @bike = current_user.bikes.build(bike_param)
-     @bike.save 
+     if @bike.save
+       redirect_to users_path
+     end 
   end
+  
+  
   def book
     
   end
@@ -23,6 +27,6 @@ class BikesController < ApplicationController
   private 
   
     def bike_param
-      params.require(:bikes).permit(:bikename, :biketype,:bikemodel)
+      params.require(:bike).permit(:bikename, :biketype,:bikemodel)
     end 
 end

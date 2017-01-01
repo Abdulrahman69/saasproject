@@ -15,10 +15,15 @@ th, td {
 <body>
  <h1><%= link_to 'Back ',controller: 'users',  action: 'index' %> </h1>
 
- <center>   
-<h1>List of bikes </h1>
- <table>
-     <tr>
+ 
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><center> <h4>List of bikes </h4></center> </div>
+ 
+
+  <!-- Table -->
+  <table class="table">
+    <tr>
         <th>ID </th>
         <th>Bike Name </th>
         <th>Bike Model</th>
@@ -27,7 +32,7 @@ th, td {
         <th> book </th>
         <th> contact </th>
     </tr>
-    <tr>
+     <tr>
          <% @bikes.each do |f| %>
         <th><%= f.id         %> </th>
         <th><%= f.bikename   %> </th>
@@ -35,11 +40,11 @@ th, td {
         <th><%= f.biketype   %> </th>
         <th><%= f.user_id  %> </th>
          <th><%=link_to 'Reviews',{:controller =>:reviews ,:action =>:new,:id =>f.id}  %></th>
-          <th><%=link_to('Book',{:action =>'book'},:class=>'action') %></th>
+         <th><%=link_to 'Book',{:controller =>:bookings ,:action =>:new,:id =>f.id}  %></th>
 
     </tr>
- <% end %>
-</table>
-</center>
-</body>
+     <% end %>
+  </table>
+</div>
+ </body>
 </html>

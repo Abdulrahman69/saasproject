@@ -4,7 +4,6 @@ class CreateReviews < ActiveRecord::Migration
       t.text :body
       t.string :title
       t.integer :bike_id
-
       t.timestamps null: false
     end
   end

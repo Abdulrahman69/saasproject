@@ -12,9 +12,11 @@ Rails.application.routes.draw do
  # get 'review/new'
  resources :bikes  
  resources :reviews
+ resources :bookings
  # get 'bikes/index'
  # get 'bikes/new'
   get 'bikes/book'
+  post 'bookings/create'
  # get 'bikes/create'
    post  'reviews/create'
 

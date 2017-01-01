@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
- def index
+ 
+  def index
+   
   end
 
 
@@ -13,7 +15,9 @@ class ReviewsController < ApplicationController
     @review = @bike.reviews.build(review_param)
     if @review.save 
         redirect_to new_review_path(:id => @bike.id)
-        return
+    else 
+        render new_review_path
+        
     end 
   end 
   
