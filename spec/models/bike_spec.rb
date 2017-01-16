@@ -2,9 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Bike  do
    
-  # bike {Bike.new}
- 
-   it 'is not valid without any of BikeName or BikeModel or BikeType' do 
+
+   it 'is not be valid without any of BikeName or BikeModel or BikeType' do 
        bike = Bike.new 
        expect(bike).not_to be_valid 
    end 

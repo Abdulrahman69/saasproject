@@ -1,12 +1,14 @@
  
 
-<h1>bookings</h1>
- 
 
+ 
+ <h1><%= link_to 'Back ',controller: 'bikes',  action: 'index' %> </h1>
+
+<h1>bookings</h1>
 <%= form_for @booking, :url => {:action => :create , :id =>@bike.id } do |f|%>
  Enter start on <%= f.text_field :starton %></br> 
  Enter end on   <%= f.text_field :endon  %></br> 
- <%= f.submit %>
+ <%= f.submit class: "btn btn-default" %>
   <% end %>
 
 <hr>
@@ -15,7 +17,7 @@
 
 <% if !@bike.bookings.blank? %>
     <%for item in @bike.bookings %>
-    </br>start date : <%=item.starton%>  </br>end date : <%=item.endon%>
+    </br>start date : <%=item.starton%>  </br>end date : <%=item.endon%><hr>
     <%end %>
     <%else %>
     no bookings  

@@ -8,9 +8,8 @@ class BookingsController < ApplicationController
   def create 
     @bike = Bike.find(params[:id])
     @booking = @bike.bookings.build(booking_param)
-    if @booking.save 
-        redirect_to new_booking_path(:id => @bike.id)
-    end 
+    @booking.save
+    redirect_to new_booking_path(:id => @bike.id)
   end 
   
   private 

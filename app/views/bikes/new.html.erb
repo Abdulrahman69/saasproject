@@ -5,20 +5,34 @@
 <h1>Register your bike</h1>
 
 <table>
-<%= form_for @bike, url: {:action =>'create'} do |f| %>
+<%= form_for @bike, url: {:action =>'create'},:html=>{:multipart =>true} do |f| %>
+
 <tr>
+    <div class="form-group">
+ 
     <th><p> Bike Name  </p></th>
-    <th> <%= f.text_field :bikename %></th>
+    <th> <%= f.text_field :bikename , class: "form-control"%></th>
+    </div>
 </tr>
+<div class="form-group">
      <th><p>Bike Type</p></th>
-    <th><%=  f.text_field :biketype  %></th>
+    <th><%=  f.text_field :biketype, class: "form-control"  %></th>
+     </div>
 </tr>
 </tr>
+<div class="form-group">
      <th><p>Bike Model</p></th>
-    <th><%=  f.text_field :bikemodel  %></th>
+    <th><%=  f.text_field :bikemodel, class: "form-control"  %></th>
+   </div> 
+</tr>
+<div class="form-group">
+     <th><p>Bike image</p></th>
+    <th><%=  f.file_field :image, class: "form-control"  %></th>
+   </div> 
 </tr>
  </table>
-    <%=  f.submit %> 
+     <%=  f.submit  class: "btn btn-default" %>  
 <%  end %>
 
 </center>
+ 

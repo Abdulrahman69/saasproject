@@ -4,7 +4,6 @@ class ReviewsController < ApplicationController
    
   end
 
-
   def new
    @bike = Bike.find(params[:id])
    @review = @bike.reviews.build
@@ -17,7 +16,6 @@ class ReviewsController < ApplicationController
         redirect_to new_review_path(:id => @bike.id)
     else 
         render new_review_path
-        
     end 
   end 
   

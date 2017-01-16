@@ -1,5 +1,5 @@
 class Booking < ActiveRecord::Base
-    validates :starton , length: {maximum: 10 },presence: true 
-    validates :endon , length: {maximum: 10 },presence: true 
+     validates :starton  ,presence: true 
+     validates :endon  ,presence: true 
     belongs_to :bike 
 end

@@ -29,8 +29,9 @@ th, td {
         <th>Bike Model</th>
         <th>bike Type</th>
         <th> Owner </th>
-        <th> book </th>
-        <th> contact </th>
+        <th> Review </th>
+        <th> Book </th>
+        <th> image </th>
     </tr>
      <tr>
          <% @bikes.each do |f| %>
@@ -39,9 +40,9 @@ th, td {
         <th><%= f.bikemodel  %> </th>
         <th><%= f.biketype   %> </th>
         <th><%= f.user_id  %> </th>
-         <th><%=link_to 'Reviews',{:controller =>:reviews ,:action =>:new,:id =>f.id}  %></th>
-         <th><%=link_to 'Book',{:controller =>:bookings ,:action =>:new,:id =>f.id}  %></th>
-
+        <th><%=link_to 'Reviews',{:controller =>:reviews , :action =>:new,:id =>f.id },class: "form-control" %></th>
+        <th><%=link_to 'Book'   ,{:controller =>:bookings ,:action =>:new,:id =>f.id} ,class: "form-control" %></th>
+        <th><%= image_tag f.image_url  %> </th>
     </tr>
      <% end %>
   </table>

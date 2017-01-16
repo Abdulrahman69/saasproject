@@ -1,12 +1,17 @@
  
+ <h1><%= link_to 'Back ',controller: 'bikes',  action: 'index' %> </h1>
+
 
 <h1>Reviews</h1>
  
-
+  
 <%= form_for @review, :url => {:action => :create , :id =>@bike.id } do |f|%>
-  Enter Title <%= f.text_field :title %></br> 
- Enter Body  <%= f.text_area :body  %></br> 
- <%= f.submit %>
+<div class="form-group">
+  Enter Title <%= f.text_field :title , class: "form-control"%></br> 
+ 
+ Enter Body  <%= f.text_area :body , class: "form-control" %></br>
+  </div>
+ <%= f.submit  class: "btn btn-default"%>
   <% end %>
 
 <hr>
@@ -15,7 +20,7 @@
 
 <% if !@bike.reviews.blank? %>
     <%for item in @bike.reviews %>
-    </br>Title : <%=item.title%>  </br>Body: <%=item.body%>
+    </br>Title : <%=item.title%>  </br>Body: <%=item.body%><hr>
     <%end %>
     <%else %>
     no review  

@@ -1,16 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Booking  do
-   it 'should not be ' do 
-       
+  
+   
+   it 'is not be valid without any of Starton or Endon ' do 
+       bike = Bike.new 
+       expect(bike).not_to be_valid 
    end 
-      it 'should not be ' do 
-       
-   end 
-      it 'should not be ' do 
-       
-   end 
-      it 'should not be ' do 
-       
-   end 
+      
 end
